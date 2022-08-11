@@ -540,6 +540,17 @@ define Device/tplink_re455-v1
 endef
 TARGET_DEVICES += tplink_re455-v1
 
+define Device/tplink_tl-mr3020-v1-16m
+  $(Device/tplink-16mlzma)
+  SOC := ar9331
+  DEVICE_MODEL := TL-MR3020
+  DEVICE_VARIANT := v1-16M
+  DEVICE_PACKAGES := kmod-usb-chipidea2 kmod-usb-ledtrig-usbport
+  TPLINK_HWID := 0x30200001
+  SUPPORTED_DEVICES += tl-mr3020
+endef
+TARGET_DEVICES += tplink_tl-mr3020-v1-16m
+
 define Device/tplink_tl-mr6400-v1
   $(Device/tplink-8mlzma)
   SOC := qca9531
